@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎯 Creative Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Creative Number Guessing Game</h1>
+    
+    <label for="difficulty">Choose Difficulty:</label>
+    <select id="difficulty" onchange="setDifficulty()">
+      <option value="easy">Easy (1-50, 10 attempts)</option>
+      <option value="medium" selected>Medium (1-100, 7 attempts)</option>
+      <option value="hard">Hard (1-200, 5 attempts)</option>
+    </select>
+
+    <p id="rangeText">Guess a number between <strong>1 and 100</strong></p>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Check</button>
+    <button onclick="resetGame()">🔄 Reset</button>
+
+    <div id="feedback"></div>
+
+    <div class="meter-container">
+      <div id="proximityMeter"></div>
+    </div>
+
+    <p>Attempts: <span id="attempts">0</span> / <span id="maxAttempts">7</span></p>
+
+    <h3>Guess History</h3>
+    <ul id="historyList"></ul>
+  </div>
+  <!-- Add inside the container, below the difficulty select -->
+<button id="darkModeBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<!-- Place these just before closing </body> -->
+<audio id="soundCorrect" src="https://freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+<audio id="soundClose" src="https://freesound.org/data/previews/146/146726_2615111-lq.mp3"></audio>
+<audio id="soundFar" src="https://freesound.org/data/previews/146/146724_2615111-lq.mp3"></audio>
+<audio id="soundGameOver" src="https://freesound.org/data/previews/250/250629_4486188-lq.mp3"></audio>
+<audio id="soundReset" src="https://freesound.org/data/previews/256/256113_3263906-lq.mp3"></audio>
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>
