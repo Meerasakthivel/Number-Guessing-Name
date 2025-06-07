@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #84fab0, #8fd3f4);
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 30px;
+  background: #ffffffcc;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  max-width: 400px;
+  width: 90vw;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 180px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border: 2px solid #00b894;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #0984e3;
+  outline: none;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 10px 5px;
+  border: none;
+  background-color: #00b894;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #019875;
+}
+
+#feedback {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  min-height: 30px;
+}
+
+.meter-container {
+  width: 100%;
+  height: 20px;
+  background: #dfe6e9;
+  border-radius: 10px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+#proximityMeter {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00b894, #55efc4);
+  transition: width 0.5s ease;
+}
+
+#historyList {
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 20px;
+  margin-top: 0;
+  color: #2d3436;
+}
+
+#historyList li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+body.dark-mode {
+  background: #121212;
+  color: #eeeeee;
+}
+
+body.dark-mode .container {
+  background: #1f1f1fcc;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input[type="number"] {
+  border-color: #55efc4;
+  background: #222222;
+  color: #eeeeee;
+}
+
+body.dark-mode button {
+  background-color: #55efc4;
+  color: #121212;
+}
+
+body.dark-mode button:hover {
+  background-color: #00b894;
+}
+
+#darkModeBtn {
+  background-color: #0984e3;
+  margin: 10px auto 20px auto;
+  display: block;
+}
